@@ -1,0 +1,18 @@
+# Ignore artifacts:
+build
+coverage
+bun.lockb
+package-log.json
+
+# dotfile
+.env*
+
+# markdown
+*.md
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
