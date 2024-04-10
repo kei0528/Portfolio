@@ -1,0 +1,162 @@
+@import "./config";
+
+@keyframes greeting-animation {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+.main-top {
+  position: relative;
+  height: clamp(450px, 80vh, 510px);
+  width: 100vw;
+  background-image: url(../../images/main.jpg);
+  background-size: cover;
+  background-position: 69% 50%;
+  h1 {
+    position: absolute;
+    top: 40%;
+    left: 13%;
+    font-size: clamp(30px, 6vw, 50px);
+    font-weight: 400;
+    color: lighten($black, 8%);
+    div {
+      span {
+        visibility: hidden;
+      }
+    }
+    div:nth-child(1) {
+      span:first-child {
+        animation: greeting-animation 0.1s 0.5s forwards;
+      }
+      span:nth-child(2) {
+        animation: greeting-animation 0.1s 0.6s forwards;
+      }
+      span:nth-child(3) {
+        animation: greeting-animation 0.1s 0.7s forwards;
+        margin-right: 0.5rem;
+      }
+      span:nth-child(4) {
+        animation: greeting-animation 0.1s 0.8s forwards;
+      }
+      span:nth-child(5) {
+        animation: greeting-animation 0.1s 0.9s forwards;
+      }
+      span:nth-child(6) {
+        animation: greeting-animation 0.1s 1s forwards;
+        margin-right: 0.5rem;
+      }
+      span:nth-child(7) {
+        animation: greeting-animation 0.1s 1.1s forwards;
+      }
+      span:nth-child(8) {
+        animation: greeting-animation 0.1s 1.2s forwards;
+      }
+      span:nth-child(9) {
+        animation: greeting-animation 0.1s 1.3s forwards;
+      }
+      span:nth-child(10) {
+        animation: greeting-animation 0.1s 1.4s forwards;
+      }
+      span:nth-child(11) {
+        animation: greeting-animation 0.1s 1.5s forwards;
+      }
+      span:nth-child(12) {
+        animation: greeting-animation 0.1s 1.6s forwards;
+      }
+      span:nth-child(13) {
+        animation: greeting-animation 0.1s 1.7s forwards;
+      }
+      span:nth-child(14) {
+        animation: greeting-animation 0.1s 1.8s forwards;
+      }
+    }
+    div:nth-child(2) {
+      span:first-child {
+        animation: greeting-animation 0.1s 1.9s forwards;
+      }
+      span:nth-child(2) {
+        animation: greeting-animation 0.1s 2s forwards;
+      }
+      span:nth-child(3) {
+        animation: greeting-animation 0.1s 2.1s forwards;
+      }
+      span:nth-child(4) {
+        animation: greeting-animation 0.1s 2.2s forwards;
+        margin-right: 0.5rem;
+      }
+      span:nth-child(5) {
+        animation: greeting-animation 0.1s 2.3s forwards;
+      }
+      span:nth-child(6) {
+        animation: greeting-animation 0.1s 2.4s forwards;
+        margin-right: 0.5rem;
+      }
+      span:nth-child(7) {
+        animation: greeting-animation 0.1s 2.5s forwards;
+      }
+      span:nth-child(8) {
+        animation: greeting-animation 0.1s 2.6s forwards;
+      }
+      span:nth-child(9) {
+        animation: greeting-animation 0.1s 2.7s forwards;
+        margin-right: 0.5rem;
+      }
+      span:nth-child(10) {
+        animation: greeting-animation 0.1s 2.8s forwards;
+      }
+      span:nth-child(11) {
+        animation: greeting-animation 0.1s 2.9s forwards;
+      }
+      span:nth-child(12) {
+        animation: greeting-animation 0.1s 3s forwards;
+      }
+      span:nth-child(13) {
+        animation: greeting-animation 0.5s 3.1s forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .main-top {
+    background-size: 310%;
+    background-position: 60% 50%;
+  }
+}
+
+@media (max-width: 270px) {
+  .main-top {
+    background-image: unset;
+    background-color: #fee27f;
+    position: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      position: unset;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-top {
+    height: clamp(570px, 80vh, 700px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      position: unset;
+      width: 1200px;
+      padding: 0 300px;
+    }
+  }
+}
