@@ -1,0 +1,70 @@
+$black: #242222;
+%font-serif {
+  font-family: "Neuton", serif;
+}
+%font-sans-serif {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+}
+%min-width {
+  min-width: 150px;
+}
+%font-size-large {
+  font-size: clamp(20px, calc(5.5vw + 1rem), 33px);
+}
+@mixin container {
+  width: clamp(30px, 80%, 480px);
+  padding: 0 0 4.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@mixin button-container($width, $height) {
+  margin-top: 1.8em;
+  position: relative;
+  width: $width;
+  height: $height;
+}
+@mixin button-border($width, $height) {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  border: solid $black 1px;
+  border-radius: 3px;
+  width: $width;
+  height: $height;
+}
+@mixin button {
+  position: absolute;
+  height: 32px;
+
+  top: 0;
+  left: 0;
+}
+@mixin button-active {
+  box-shadow: unset;
+  top: -3px;
+  left: -3px;
+}
+@mixin section-pc {
+  margin: 6rem auto;
+  width: calc(100vw - 8.4rem);
+}
+@mixin section-pc-large {
+  width: 1050px;
+  margin: 7.5rem auto;
+}
+@mixin responsive-img($scale, $positionX, $positionY) {
+  transform: scale($scale);
+  object-position: $positionX $positionY;
+}
+@mixin tech-list-item {
+  list-style: none;
+  border-radius: 3px;
+  width: fit-content;
+  padding: 0.1rem 0.45rem;
+  margin: 0 0.4rem 0.4rem 0.4rem;
+  background-color: #f3f5ef;
+  font-size: 0.8rem;
+}

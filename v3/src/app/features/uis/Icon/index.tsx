@@ -1,4 +1,7 @@
 export * from './Gitlab'
 export * from './Github'
+export * from './LinkedIn'
 export * from './Mail'
 export * from './Hover'
+export * from './Sun'
+export * from './Moon'

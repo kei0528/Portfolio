@@ -1,0 +1,37 @@
+@import "./header";
+@import "./main-top.scss";
+@import "./about";
+@import "./my-works";
+@import "./contact";
+@import "./footer";
+@import "./config";
+
+html {
+  scroll-behavior: smooth;
+  body {
+    color: $black;
+    @extend %font-sans-serif;
+    @extend %min-width;
+    h1,
+    h2,
+    h3,
+    h4 {
+      @extend %font-serif;
+    }
+    h2 {
+      width: fit-content;
+      margin-bottom: 0.6em;
+      font-weight: 300;
+      @extend %font-size-large;
+      border-bottom: $black solid 1px;
+      padding: 0 0.3rem;
+    }
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+    section {
+      width: 100vw;
+    }
+  }
+}
