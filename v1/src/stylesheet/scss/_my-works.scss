@@ -1,0 +1,142 @@
+@import "./config";
+.my-works {
+  display: flex;
+  padding: 2.2rem 0;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    margin-bottom: 2.2rem;
+  }
+  &-container {
+    @include container;
+    padding: 0;
+    .my-works-window {
+      width: 100%;
+      margin-bottom: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 8px;
+      box-shadow: #86868661 0px 2px 16px -5px;
+      &-img-container {
+        width: 100%;
+        img {
+          box-sizing: border-box;
+          padding: 5%;
+          width: 100%;
+          height: 47vw;
+          border-radius: 8px;
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+      }
+      h3 {
+        margin: 1rem 0;
+        font-weight: 300;
+        font-size: clamp(17px, calc(5.3vw + 1rem), 23px);
+      }
+      h3,
+      p {
+        box-sizing: border-box;
+        padding: 0 5%;
+      }
+      ul {
+        padding: 0 5%;
+        margin: 1.5rem 0 1rem 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          @include tech-list-item;
+        }
+      }
+      .mw-button-container {
+        width: 100%;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        a {
+          margin: 0.2rem;
+        }
+        .mw-read-code {
+          height: 32.5px;
+          width: 32.5px;
+          border: 1px $black solid;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fee1834a;
+          &:hover {
+            opacity: 0.7;
+          }
+          img {
+            height: 50%;
+            width: 50%;
+            transform: rotate(3deg);
+          }
+        }
+        .mw-go-to-page {
+          width: 130px;
+          border: 1px $black solid;
+          padding: 0.3rem 0.8rem;
+          border-radius: 3px;
+          font-size: 0.9rem;
+          &::after {
+            content: "Got Interested?";
+          }
+          &:hover {
+            background-color: #ddfdce;
+            &::after {
+              content: "Interested!";
+              color: $black;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+    .my-works-window:hover {
+      transition-duration: 0.2s;
+      box-shadow: #86868661 0px 10px 17px 2px;
+    }
+    .nachrichten-heute {
+      img {
+        object-position: 0% 0%;
+      }
+    }
+    .budde-kaffee {
+      img {
+        object-position: 0% 0%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .my-works {
+    @include section-pc;
+    padding: 0 0 0 0;
+    &-container {
+      width: 100%;
+      padding: unset;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      .my-works-window {
+        width: 30%;
+        img {
+          height: clamp(180px, 23vw, 220px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .my-works {
+    @include section-pc-large;
+  }
+}

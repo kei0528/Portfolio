@@ -5,7 +5,6 @@ import { ProfileCode } from './features/layouts/ProfileCode'
 import { About } from './features/layouts/About'
 import { Bio } from './features/layouts/Bio'
 import { Contact } from './features/layouts/Contact'
-import { Gallery } from './features/layouts/Gallery'
 
 const Home = (): JSX.Element => {
   return (
@@ -19,7 +18,6 @@ const Home = (): JSX.Element => {
         <div className='mt-12 grid gap-10 md:mt-0 md:gap-20'>
           <About />
           <Bio />
-          <Gallery />
         </div>
       </div>
 

@@ -11,7 +11,7 @@ export const TimelineItem = ({ date, title, description, image }: Props): JSX.El
       <time className='block text-sm opacity-70 '>{date}</time>
       <h3 className='text-lg'>{title}</h3>
       {description && <p className='text-sm opacity-70'>{description}</p>}
-      {image && <Image src={image} alt='' width={500} height={500} />}
+      {image && <Image src={image} alt='' width={250} height={250} className='my-10' />}
     </li>
   )
 }
