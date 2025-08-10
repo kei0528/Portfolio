@@ -24,7 +24,7 @@ const ptMono = localFont({
 
 export const metadata: Metadata = {
   title: 'Dev Keisuke',
-  description: 'Keisuke: Developer, angler and barista ',
+  description: 'Keisuke: Developer and Barista',
   icons: '/logo/logo.svg',
 }
 

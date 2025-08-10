@@ -17,7 +17,7 @@ export const NameCard = (): JSX.Element => {
         <Headline Component='h1' className='mb-0 sm:text-xl md:mb-0'>
           Keisuke Tanaka
         </Headline>
-        <p className='opacity-70'>Frontend dev</p>
+        <p className='opacity-70'>Software Engineer</p>
       </div>
     </div>
   )

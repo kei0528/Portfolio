@@ -7,6 +7,7 @@ import {
   toDarkMode,
   toLightMode,
 } from '../../styles/darkmode'
+import { Moon, Sun } from '../../uis/Icon'
 
 export const DarkModeToggler = (): JSX.Element => {
   const [isDarkMode, setIsDarkMode] = useState(true)
@@ -25,27 +26,23 @@ export const DarkModeToggler = (): JSX.Element => {
 
   return (
     <button
-      className='mb-2 block text-xs'
+      className='mx-auto mb-2 flex text-xs'
       onClick={() => setIsDarkMode((state) => !state)}
     >
-      <span
-        className={
-          !isDarkMode
-            ? 'relative inline-block font-bold before:absolute before:-left-3 before:bottom-0 before:top-0 before:my-auto before:content-["✔"]'
-            : ''
-        }
-      >
-        SUN
+      <span>
+        <Sun
+          height={16}
+          width={16}
+          className='[&_path]:fill-grey-800 [&_path]:dark:fill-grey-200'
+        />
       </span>
       <span className='mx-1'>|</span>
-      <span
-        className={
-          isDarkMode
-            ? 'relative inline-block font-bold before:absolute before:-right-3 before:bottom-0 before:top-0 before:my-auto before:content-["✔"]'
-            : ''
-        }
-      >
-        MOON
+      <span>
+        <Moon
+          height={16}
+          width={16}
+          className='[&_path]:stroke-grey-800 [&_path]:dark:stroke-grey-200'
+        />
       </span>
     </button>
   )
