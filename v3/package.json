@@ -11,7 +11,7 @@
     "format": "prettier --write '*/**/*.{js,jsx,ts,tsx,json,css,md}'"
   },
   "dependencies": {
-    "@radix-ui/react-tooltip": "1.0.7",
+    "@radix-ui/react-tooltip": "1.2.8",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",
     "lucide-react": "0.365.0",
